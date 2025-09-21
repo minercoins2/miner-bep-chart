@@ -1,10 +1,20 @@
 export default function handler(req, res) {
-  res.setHeader("Content-Type", "application/json");
-  res.status(200).json({
-    version: "vNext",
-    image: "https://minercoins-mfa1wq8in-minercoins.vercel.app/step2.png",
-    buttons: [
-      { label: "Lanjut", action: "post" }
-    ]
-  });
+  // Cek method POST (sesuai format Farcaster Frame)
+  if (req.method === "POST") {
+    const { untrustedData } = req.body || {};
+
+    // Response ke Warpcast
+    return res.status(200).json({
+      type: "frame",
+      title: "Minercoins Frame",
+      image: "https://minercoins-hls3xvccn-minercoins.vercel.app/preview.png",
+      buttons: [
+        { label: "Mainkan Lagi", action: "post" },
+        { label: "Website", action: "link", target: "https://minercoins-hls3xvccn-minercoins.vercel.app" }
+      ]
+    });
+  }
+
+  // Kalau bukan POST → tolak
+  return res.status(405).json({ error: "Method not allowed" });
 }
