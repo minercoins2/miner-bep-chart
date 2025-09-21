@@ -1,4 +1,11 @@
 export default function handler(req, res) {
+  res.status(200).json({
+    version: "vNext",
+    image: "https://minercoins-git-main-minercoins.vercel.app/preview.png",
+    buttons: [{ label: "Mulai" }],
+    post_url: "https://minercoins-git-main-minercoins.vercel.app/api/frame"
+  });
+}export default function handler(req, res) {
   // Cek method POST (sesuai format Farcaster Frame)
   if (req.method === "POST") {
     const { untrustedData } = req.body || {};
