@@ -28,3 +28,14 @@
   <p>Buka lewat Farcaster / Warpcast untuk melihat Frame.</p>
 </body>
 </html>
+
+export default function handler(req, res) {
+  res.setHeader("Content-Type", "application/json");
+  res.status(200).json({
+    version: "vNext",
+    image: "https://minercoins.vercel.app/preview.png",
+    buttons: [
+      { label: "Mulai", action: "post" }
+    ]
+  });
+}

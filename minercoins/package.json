@@ -1,16 +1,19 @@
 {
   "name": "minercoins",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "express": "^5.1.0"
+    "next": "14.2.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "rollup": "^3.29.5"
   }
 }
