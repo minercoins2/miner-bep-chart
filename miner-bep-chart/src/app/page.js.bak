@@ -1,0 +1,35 @@
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-[#0d1b2a] text-white font-mono">
+      <h1 className="text-center text-yellow-400 text-2xl py-4 font-bold">
+        🚀 Crypto Miner
+      </h1>
+
+      {/* Stats */}
+      <div className="max-w-md mx-auto bg-[#14213d] border-2 border-yellow-500 p-4 rounded-md text-sm">
+        <p>YOU ARE MINING 0.001 BIGCOIN A DAY</p>
+        <p>YOUR HASH RATE IS 100 GH/S</p>
+        <p>NEXT HALVENING IN 2,565,330 BLOCKS</p>
+        <p>YOU HAVE 0.000003% OF THE TOTAL HASH RATE</p>
+      </div>
+
+      {/* Room */}
+      <div className="flex justify-center my-6">
+        <img src="/room.png" alt="Room Pixel Art" width="300" />
+      </div>
+
+      {/* Menu */}
+      <div className="flex justify-center gap-4">
+        <button className="bg-yellow-500 text-black px-4 py-2 rounded font-bold">
+          ACTIONS
+        </button>
+        <button className="bg-yellow-500 text-black px-4 py-2 rounded font-bold">
+          STATS
+        </button>
+        <button className="bg-yellow-500 text-black px-4 py-2 rounded font-bold">
+          MINING
+        </button>
+      </div>
+    </main>
+  );
+}

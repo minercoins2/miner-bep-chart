@@ -1,0 +1,12 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    optimizePackageImports: [], // optional
+  },
+  compiler: {
+    // Disable LightningCSS
+    lightningcss: false,
+  },
+};
+
+export default nextConfig;

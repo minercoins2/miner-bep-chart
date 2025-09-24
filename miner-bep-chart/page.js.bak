@@ -1,0 +1,72 @@
+cat > src/app/page.js << 'EOF'
+"use client";
+import React from "react";
+
+const PixelArtIsometricRoom = () => {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-200 p-4">
+      <div className="text-center mb-6">
+        <h1 className="text-2xl font-bold text-slate-900 mb-2">Pixel Art Room</h1>
+        <p className="text-slate-600">Workspace cerah dengan laptop & mining rig</p>
+      </div>
+
+      <div className="relative w-full max-w-3xl h-[600px] overflow-hidden">
+        {/* Lantai kayu */}
+        <div className="absolute w-[140%] h-[140%] bg-amber-500 transform rotate-45 skew-x-12 skew-y-12 -translate-x-20 -translate-y-20">
+          <div
+            className="absolute inset-0 bg-repeat"
+            style={{
+              backgroundImage: `linear-gradient(90deg, rgba(255, 200, 150, 0.3) 1px, transparent 1px),
+                                linear-gradient(0deg, rgba(255, 180, 120, 0.2) 1px, transparent 1px)`,
+              backgroundSize: "20px 20px",
+            }}
+          ></div>
+        </div>
+
+        {/* Meja */}
+        <div className="absolute w-64 h-24 bg-amber-600 transform rotate-45 skew-x-12 skew-y-12 left-40 top-56 z-10">
+          <div className="absolute -top-4 left-0 w-full h-4 bg-amber-700"></div>
+          <div className="absolute -bottom-20 left-4 w-4 h-20 bg-amber-800"></div>
+          <div className="absolute -bottom-20 right-4 w-4 h-20 bg-amber-800"></div>
+        </div>
+
+        {/* Orang menghadap depan */}
+        <div className="absolute w-16 h-24 transform rotate-45 skew-x-12 skew-y-12 left-52 top-40 z-20">
+          {/* Kepala */}
+          <div className="absolute w-8 h-8 bg-pink-300 top-0 left-4 rounded-sm">
+            <div className="absolute w-2 h-2 bg-black top-2 left-1"></div>
+            <div className="absolute w-2 h-2 bg-black top-2 right-1"></div>
+          </div>
+          {/* Badan */}
+          <div className="absolute w-12 h-12 bg-sky-400 top-8 left-2"></div>
+        </div>
+
+        {/* Laptop */}
+        <div className="absolute w-16 h-12 transform rotate-45 skew-x-12 skew-y-12 left-60 top-64 z-15">
+          <div className="absolute w-16 h-4 bg-gray-800 top-4"></div>
+          <div className="absolute w-14 h-2 bg-green-500 top-2 left-1"></div>
+          <div className="absolute w-14 h-1 bg-gray-700 top-5 left-1"></div>
+        </div>
+
+        {/* Mining Rig */}
+        <div className="absolute w-48 h-32 transform rotate-45 skew-x-12 skew-y-12 left-20 top-72 z-5">
+          <div className="absolute w-48 h-24 bg-slate-700"></div>
+          <div className="absolute w-44 h-20 bg-black top-2 left-2"></div>
+
+          {/* VGA Cards */}
+          <div className="absolute w-6 h-16 bg-red-400 top-4 left-8"></div>
+          <div className="absolute w-6 h-16 bg-blue-400 top-4 left-18"></div>
+          <div className="absolute w-6 h-16 bg-green-400 top-4 left-28"></div>
+          <div className="absolute w-6 h-16 bg-purple-400 top-4 left-38"></div>
+        </div>
+      </div>
+
+      <div className="mt-8 text-center text-sm text-slate-500">
+        <p>Room pixel art cerah, orang menghadap depan, laptop & mining rig</p>
+      </div>
+    </div>
+  );
+};
+
+export default PixelArtIsometricRoom;
+EOF
